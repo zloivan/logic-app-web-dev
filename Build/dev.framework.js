@@ -1994,13 +1994,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  3990560: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 3990621: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 3990685: function() {return Module.webglContextAttributes.powerPreference;},  
- 3990743: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 3990798: function($0) {performance.now = function() { return $0; };},  
- 3990846: function($0) {performance.now = function() { return $0; };},  
- 3990894: function() {performance.now = Module['emscripten_get_now_backup'];}
+  3990288: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 3990349: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 3990413: function() {return Module.webglContextAttributes.powerPreference;},  
+ 3990471: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 3990526: function($0) {performance.now = function() { return $0; };},  
+ 3990574: function($0) {performance.now = function() { return $0; };},  
+ 3990622: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -17792,6 +17792,12 @@ var dynCall_vidiii = Module["dynCall_vidiii"] = createExportWrapper("dynCall_vid
 var dynCall_fiiiiii = Module["dynCall_fiiiiii"] = createExportWrapper("dynCall_fiiiiii");
 
 /** @type {function(...*):?} */
+var dynCall_iiffi = Module["dynCall_iiffi"] = createExportWrapper("dynCall_iiffi");
+
+/** @type {function(...*):?} */
+var dynCall_iiiffffi = Module["dynCall_iiiffffi"] = createExportWrapper("dynCall_iiiffffi");
+
+/** @type {function(...*):?} */
 var dynCall_vifiii = Module["dynCall_vifiii"] = createExportWrapper("dynCall_vifiii");
 
 /** @type {function(...*):?} */
@@ -17811,12 +17817,6 @@ var dynCall_vidddi = Module["dynCall_vidddi"] = createExportWrapper("dynCall_vid
 
 /** @type {function(...*):?} */
 var dynCall_vidddfi = Module["dynCall_vidddfi"] = createExportWrapper("dynCall_vidddfi");
-
-/** @type {function(...*):?} */
-var dynCall_iiffi = Module["dynCall_iiffi"] = createExportWrapper("dynCall_iiffi");
-
-/** @type {function(...*):?} */
-var dynCall_iiiffffi = Module["dynCall_iiiffffi"] = createExportWrapper("dynCall_iiiffffi");
 
 /** @type {function(...*):?} */
 var dynCall_viiififi = Module["dynCall_viiififi"] = createExportWrapper("dynCall_viiififi");
@@ -20610,6 +20610,39 @@ function invoke_fiiiiii(index,a1,a2,a3,a4,a5,a6) {
   }
 }
 
+function invoke_vid(index,a1,a2) {
+  var sp = stackSave();
+  try {
+    dynCall_vid(index,a1,a2);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiif(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiif(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiffffi(index,a1,a2,a3,a4,a5,a6,a7) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiffffi(index,a1,a2,a3,a4,a5,a6,a7);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
 function invoke_iffffi(index,a1,a2,a3,a4,a5) {
   var sp = stackSave();
   try {
@@ -20680,39 +20713,6 @@ function invoke_viiffiii(index,a1,a2,a3,a4,a5,a6,a7) {
   var sp = stackSave();
   try {
     dynCall_viiffiii(index,a1,a2,a3,a4,a5,a6,a7);
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
-
-function invoke_vid(index,a1,a2) {
-  var sp = stackSave();
-  try {
-    dynCall_vid(index,a1,a2);
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
-
-function invoke_iiif(index,a1,a2,a3) {
-  var sp = stackSave();
-  try {
-    return dynCall_iiif(index,a1,a2,a3);
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
-
-function invoke_iiiffffi(index,a1,a2,a3,a4,a5,a6,a7) {
-  var sp = stackSave();
-  try {
-    return dynCall_iiiffffi(index,a1,a2,a3,a4,a5,a6,a7);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
